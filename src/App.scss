@@ -1,0 +1,199 @@
+body {
+    font-family: Oxygen, sans-serif;
+    background-color: #d6e3e0;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+      max-width: 60rem;
+      margin: 0 auto;
+      min-height: 100vh;
+  }
+
+  .navbar {
+      padding: 1rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid gray;
+
+      &__btn {
+          border: none;
+          background-color: #f4efef;
+          border-radius: 0.5rem;
+          font-size: 1.5rem;
+      }
+  }
+  
+.search-card {
+    display: flex;
+    align-items: center;
+    background-color: #f4efef;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    margin: 1rem;
+
+    &__input {
+        border: none;
+        background-color: #f4efef;
+
+        &:focus { 
+            outline: none;
+        }
+    }
+}
+
+.notes-grid {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+grid-gap: 2rem;
+margin: 1rem;
+max-width: 66rem;
+text-align: center;
+
+    @media screen and(max-width: 760px) {
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+    }
+}
+
+.card {
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 200ms ease-in;
+    max-width: 20rem;
+    width: 100%;
+    margin: 0 auto;
+    background-color: #fff;
+
+    &:hover {
+        transform: scale(1.05);
+        border: 2px solid gray;
+      }
+      
+    &__data {
+        font-size: 0.8rem;
+        text-align: end;
+        padding: 0.5rem;
+    }
+    
+    &__title {
+        padding: 1rem;
+    }
+    
+    &__description {
+        padding: 1rem;
+    }
+
+    &__delete {
+        padding: 0.4rem;
+        color: red;
+        width: 4rem;
+        border: 2px solid red;
+        background: #fff;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        margin: 1rem;
+        transition: background 200ms ease-in, color 200ms ease-in;
+        
+        &:hover  {
+        background: red;
+        color: white;
+        }
+    }
+} 
+
+.new-card {
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 200ms ease-in;
+    max-width: 20rem;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(215, 226, 224);
+
+    &:hover {
+        transform: scale(1.05);
+        border: 2px solid gray;
+      }
+
+    &__add {
+        margin-top: 1rem;
+    }
+
+    &__title, &__description  {
+        border: none;
+        resize: none;
+        background-color: rgb(215, 226, 224);
+        padding:0.5rem 1rem;
+        width: 100%;
+
+        &:focus {
+            outline: none;
+        }
+    }
+    
+    &__save {
+        padding: 0.4rem;
+        color: lightseagreen;
+        width: 4rem;
+        border: 2px solid lightseagreen;
+        background: #fff;
+        border-radius: 0.5rem;
+        margin: 1rem;
+        cursor: pointer;
+        transition: background 200ms ease-in, color 200ms ease-in;
+    
+        &:hover  {
+        background: lightseagreen;
+        color: white;
+        }
+    }
+} 
+
+.card-update {
+    border: 1px solid gray;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 200ms ease-in;
+    max-width: 20rem;
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(215, 226, 224);
+    padding:0 1rem;
+
+    &__save {
+        padding: 0.4rem;
+        color: lightseagreen;
+        width: 4rem;
+        border: 2px solid lightseagreen;
+        background: #fff;
+        border-radius: 0.5rem;
+        margin: 1rem;
+        text-align: center;
+        cursor: pointer;
+        transition: background 200ms ease-in, color 200ms ease-in;
+    
+        &:hover  {
+        background: lightseagreen;
+        color: white;
+        }
+    }
+}
+
+  
